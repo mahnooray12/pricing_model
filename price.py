@@ -7,10 +7,9 @@ from geopy.distance import geodesic
 import os
 
 # Load paths
-base_dir = os.path.dirname(__file__)
-model = joblib.load(os.path.join(base_dir, '..', 'model', 'price_predictor.pkl'))
-label_encoders = joblib.load(os.path.join(base_dir, '..', 'model', 'label_encoders.pkl'))
-dataset_df = pd.read_csv(os.path.join(base_dir, '..', 'dataset', 'lahore_dataset.csv'))
+model = joblib.load("model/price_predictor.pkl")
+label_encoders = joblib.load("model/label_encoders.pkl")
+dataset_df = pd.read_csv("dataset/lahore_dataset.csv")
 
 # Known locations for nearest area calculation
 known_locations = {
